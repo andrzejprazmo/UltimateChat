@@ -1,0 +1,6 @@
+@See.Chat.Web.Room_HostAddress = http://localhost:5095
+
+GET {{See.Chat.Web.Room_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

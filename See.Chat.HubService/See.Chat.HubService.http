@@ -1,0 +1,6 @@
+@See.Chat.HubService_HostAddress = http://localhost:5224
+
+GET {{See.Chat.HubService_HostAddress}}/healthz/
+Accept: application/json
+
+###
