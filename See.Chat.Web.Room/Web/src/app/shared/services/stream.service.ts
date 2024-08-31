@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { PeerData } from '@shared/types/shared.types';
-import SimplePeer, { Instance } from 'simple-peer';
+import { Instance } from 'simple-peer';
+
+declare var SimplePeer: any;
 
 @Injectable({
   providedIn: 'root'

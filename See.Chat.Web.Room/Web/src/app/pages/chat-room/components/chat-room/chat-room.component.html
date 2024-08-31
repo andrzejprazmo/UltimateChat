@@ -1,1 +1,49 @@
-<p>chat-room works!</p>
+<div class="d-flex flex-row">
+    @switch (chatRoomStatus) {
+    @default {
+    <ng-container *ngTemplateOutlet="createChatRoomForm"></ng-container>
+    }
+    @case (ChatRoomStatus.Registered) {
+        <ng-container *ngTemplateOutlet="chatRoomQueue"></ng-container>
+    }
+    @case (ChatRoomStatus.Connected) {
+    }
+    }
+</div>
+
+<ng-template #createChatRoomForm>
+    <form [formGroup]="form" class="w-50" (submit)="onSubmit()">
+        <div class="card m-2">
+            <div class="card-header">
+                <h4 class="card-title">Create chat room</h4>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="chatRoom">Name</label>
+                    <input type="text" class="form-control" formControlName="chatRoom" id="chatRoom"
+                        placeholder="Enter chat room name">
+                </div>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-primary" type="submit">Create</button>
+            </div>
+        </div>
+    </form>
+</ng-template>
+<ng-template #chatRoomQueue>
+    <div class="card m-2">
+        <div class="card-header">
+            <h4 class="card-title">Chat room queue</h4>
+        </div>
+        <div class="card-body">
+            <div class="list-group">
+                @for (item of queue; track $index) {
+                <a href="#" class="list-group-item list-group-item-action">
+                    {{ item.userName }}</a>
+                } @empty {
+                    <div><em>Empty queue...</em></div>
+                }
+            </div>
+        </div>
+    </div>
+</ng-template>

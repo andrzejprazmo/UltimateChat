@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Mvc;
+
 var webApplicationOptions = new WebApplicationOptions
 {
     Args = args,
@@ -20,9 +22,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 app.UseStaticFiles();
-app.UseHttpsRedirection();
 app.UseRouting();
 app.UseAuthorization();
+
+app.MapGet("/api/config", ([FromServices]IConfiguration config) => new 
+{ 
+    HubUrl = config["Hub:Url"],
+});
 
 app.MapFallbackToFile("index.html");
 

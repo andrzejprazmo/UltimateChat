@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "See.Chat.HubService", "See.Chat.HubService\See.Chat.HubService.csproj", "{7CA49A66-50D4-4982-A739-B63F450D7B17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "See.Chat.HubService", "See.Chat.HubService\See.Chat.HubService.csproj", "{7CA49A66-50D4-4982-A739-B63F450D7B17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "See.Chat.Web.Room", "See.Chat.Web.Room\See.Chat.Web.Room.csproj", "{EE1C51A7-0B19-496C-83AA-44FB479E692B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "See.Chat.Web.Room", "See.Chat.Web.Room\See.Chat.Web.Room.csproj", "{EE1C51A7-0B19-496C-83AA-44FB479E692B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "See.Chat.Web.Client", "See.Chat.Web.Client\See.Chat.Web.Client.csproj", "{365297A5-E7F5-47C9-9078-FA20BB33ECDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "See.Chat.Web.Client", "See.Chat.Web.Client\See.Chat.Web.Client.csproj", "{365297A5-E7F5-47C9-9078-FA20BB33ECDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{71C08C60-1BAD-42B3-9F67-E3B136AB437D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{365297A5-E7F5-47C9-9078-FA20BB33ECDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{365297A5-E7F5-47C9-9078-FA20BB33ECDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{365297A5-E7F5-47C9-9078-FA20BB33ECDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71C08C60-1BAD-42B3-9F67-E3B136AB437D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71C08C60-1BAD-42B3-9F67-E3B136AB437D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71C08C60-1BAD-42B3-9F67-E3B136AB437D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71C08C60-1BAD-42B3-9F67-E3B136AB437D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

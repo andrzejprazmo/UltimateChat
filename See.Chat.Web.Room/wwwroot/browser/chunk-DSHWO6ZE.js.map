@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/shared/types/shared.types.ts"],
+  "sourcesContent": ["import { InjectionToken } from \"@angular/core\";\r\n\r\nexport interface GlobalConfiguration {\r\n    hubUrl: string,\r\n}\r\n\r\nexport interface ChatRoomData {\r\n    connectionId: string,\r\n    chatRoom: string,\r\n}\r\nexport interface SignalInfo {\r\n    connectionId: string,\r\n    signal: any;\r\n}\r\nexport interface PeerData {\r\n    id: string;\r\n    data: any;\r\n}\r\nexport interface UserInfo {\r\n    userName: string;\r\n    connectionId: string;\r\n}\r\n\r\nexport const APPLICATION_CONFIG = new InjectionToken<GlobalConfiguration>('GlobalConfiguration');"],
+  "mappings": ";;;;;AAuBO,IAAM,qBAAqB,IAAI,eAAoC,qBAAqB;",
+  "names": []
+}

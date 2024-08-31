@@ -1,12 +1,14 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HubConnection, HubConnectionBuilder } from '@microsoft/signalr';
 import { Subject } from 'rxjs';
-import { SignalInfo, UserInfo } from '@shared/types/shared.types';
+import { APPLICATION_CONFIG, GlobalConfiguration, SignalInfo, UserInfo } from '@shared/types/shared.types';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConnectionService {
+
+  appConfig: GlobalConfiguration = inject(APPLICATION_CONFIG);
 
   public connectionHub!: HubConnection
 
@@ -24,7 +26,7 @@ export class ConnectionService {
 
   public initializeConnection() {
     this.connectionHub = new HubConnectionBuilder()
-      .withUrl('/chat')
+      .withUrl(`${this.appConfig.hubUrl}/chat`)
       .build();
 
     this.connectionHub.on('SendVideo', (connectionId, signal) => {
