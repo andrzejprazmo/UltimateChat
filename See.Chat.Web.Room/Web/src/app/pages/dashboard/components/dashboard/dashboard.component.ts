@@ -1,6 +1,5 @@
 import { Component, inject } from '@angular/core';
 import { DashboardService } from '../../services/dashboard.service';
-import { ChatRoomForm } from '../../types/dashboard.types';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,12 +10,5 @@ import { ChatRoomForm } from '../../types/dashboard.types';
 })
 export default class DashboardComponent {
   dashboardService = inject(DashboardService);
-  form!: ChatRoomForm;
 
-  ngOnInit() {
-    this.form = this.dashboardService.buildChatRoomForm({
-      chatRoom: '',
-      connectionId: ''
-    })
-  }
 }
