@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/chat-room/services/chat-room.service.ts", "src/app/pages/chat-room/components/chat-room/chat-room.component.ts", "src/app/pages/chat-room/components/chat-room/chat-room.component.html"],
+  "sourcesContent": ["import { Injectable } from '@angular/core';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class ChatRoomService {\r\n\r\n  constructor() { }\r\n}\r\n", "import { Component, inject } from '@angular/core';\r\nimport { ChatRoomService } from '../../services/chat-room.service';\r\n\r\n@Component({\r\n  selector: 'app-chat-room',\r\n  standalone: true,\r\n  imports: [],\r\n  templateUrl: './chat-room.component.html',\r\n  styleUrl: './chat-room.component.css'\r\n})\r\nexport default class ChatRoomComponent {\r\n  chatRoomService = inject(ChatRoomService);\r\n\r\n  \r\n}\r\n", "<p>chat-room works!</p>\r\n"],
+  "mappings": ";;;;;;;;;;;;AAKM,IAAO,mBAAP,MAAO,iBAAe;EAE1B,cAAA;EAAgB;;;mBAFL,kBAAe;AAAA;oFAAf,kBAAe,SAAf,iBAAe,WAAA,YAFd,OAAM,CAAA;AAEd,IAAO,kBAAP;;;ACKN,IAAqB,qBAArB,MAAqB,mBAAiB;EAPtC,cAAA;AAQE,SAAA,kBAAkB,OAAO,eAAe;;;;mBADrB,oBAAiB;AAAA;mFAAjB,oBAAiB,WAAA,CAAA,CAAA,eAAA,CAAA,GAAA,YAAA,MAAA,UAAA,CAAA,6BAAA,GAAA,OAAA,GAAA,MAAA,GAAA,UAAA,SAAA,2BAAA,IAAA,KAAA;AAAA,MAAA,KAAA,GAAA;ACVtC,IAAA,yBAAA,GAAA,GAAA;AAAG,IAAA,iBAAA,GAAA,kBAAA;AAAgB,IAAA,uBAAA;;;ADUnB,IAAqB,oBAArB;;6EAAqB,mBAAiB,EAAA,WAAA,qBAAA,UAAA,6EAAA,YAAA,GAAA,CAAA;AAAA,GAAA;",
+  "names": []
+}

@@ -31,6 +31,10 @@
     "iis": {
       "applicationUrl": "http://localhost/See.Chat.HubService",
       "sslPort": 0
+    },
+    "iisExpress": {
+      "applicationUrl": "http://localhost:58436/",
+      "sslPort": 44397
     }
   }
 }

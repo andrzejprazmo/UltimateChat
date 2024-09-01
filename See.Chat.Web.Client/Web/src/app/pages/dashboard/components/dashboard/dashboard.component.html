@@ -1,0 +1,14 @@
+<div class="d-flex flex-row">
+    @for (item of chatRooms; track $index){
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">{{ item.roomName }}</h5>
+        </div>
+        <div class="card-footer">
+            <a [routerLink]="['/chat-room', item.connectionId]">Join</a>
+        </div>
+    </div>
+    } @empty {
+    <div class="alert alert-info" role="alert">No chat rooms available</div>
+    }
+</div>

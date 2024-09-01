@@ -1,6 +1,6 @@
 ﻿namespace See.Chat.HubService.Infrastructure
 {
-    public record ChatRoom(string ConnectionId, string UserName);
+    public record ChatRoom(string ConnectionId, string RoomName);
     public class ChatRoomsProvider
     {
         private readonly List<ChatRoom> _connections = new();
@@ -10,9 +10,9 @@
             return _connections;
         }
 
-        public void AddChatRoom(string connectionId, string userName)
+        public void AddChatRoom(string connectionId, string chatRoomName)
         {
-            _connections.Add(new ChatRoom(connectionId, userName));
+            _connections.Add(new ChatRoom(connectionId, chatRoomName));
         }
 
         public void RemoveChatRoom(string connectionId)

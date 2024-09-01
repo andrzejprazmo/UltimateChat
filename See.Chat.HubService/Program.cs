@@ -32,7 +32,12 @@ namespace See.Chat.HubService
                .AllowCredentials());
 
             app.UseAuthorization();
-            app.MapGet("/rooms", ([FromServices] ChatRoomsProvider connectionProvider) => connectionProvider.GetChatRooms());
+            app.MapGet("/api/rooms", ([FromServices] ChatRoomsProvider connectionProvider) => Results.Ok(connectionProvider.GetChatRooms()));
+            app.MapGet("/api/room/{connectionId}", ([FromServices] ChatRoomsProvider connectionProvider, string connectionId) => 
+            { 
+                var room = connectionProvider.GetChatRooms().FirstOrDefault(c => c.ConnectionId == connectionId);
+                return room != null ? Results.Ok(room) : Results.NotFound();
+            });
             app.UseHealthChecks("/healthz");
             app.MapHub<VideoChatHub>("/chat");
 

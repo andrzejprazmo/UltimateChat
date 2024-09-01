@@ -22,7 +22,7 @@ import {
 // src/app/app.routes.ts
 var routes = [
   { path: "dashboard", loadComponent: () => import("./chunk-IGFHDHKZ.js") },
-  { path: "chat-room", loadComponent: () => import("./chunk-YUPPMOHD.js") },
+  { path: "chat-room", loadComponent: () => import("./chunk-4LQWLVT4.js") },
   { path: "", redirectTo: "dashboard", pathMatch: "full" }
 ];
 

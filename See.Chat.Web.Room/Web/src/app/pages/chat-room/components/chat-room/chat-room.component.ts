@@ -33,7 +33,6 @@ export default class ChatRoomComponent {
   ChatRoomStatus = ChatRoomStatus;
 
   ngOnInit() {
-    this.connectionService.initializeConnection();
     this.form = this.chatRoomService.buildChatRoomForm({
       chatRoom: '',
       connectionId: ''
@@ -45,9 +44,11 @@ export default class ChatRoomComponent {
       this.form.markAllAsTouched();
       return;
     }
-    this.connectionService.connectionHub.invoke("NewChatRoom", this.form.controls.chatRoom.value).then(() => {
-      this.setEvents();
-      this.chatRoomStatus = ChatRoomStatus.Registered;
+    this.connectionService.initializeConnection().then(() => {
+      this.connectionService.connectionHub.invoke("NewChatRoom", this.form.controls.chatRoom.value).then(() => {
+        this.setEvents();
+        this.chatRoomStatus = ChatRoomStatus.Registered;
+      });
     });
   }
 
